@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Glass</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            background-color: #3A2D5F;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: red;
+        }
+        
+        .header-linkes {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-linkes a,
+        .header-linkes button {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            transition: 0.7s ease;
+        }
+        
+        .header-linkes a:hover,
+        .header-linkes button:hover {
+            background-color: red;
+        }
+        
+        .header-linkes button {
+            background-color: rgb(250, 250, 250);
+            color: #3A2D5F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        .header-linkes button:hover {
+            background-color: rgb(241, 120, 140);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .header-linkes {
+                flex-direction: column;
+                width: 100%;
+            }
+        
+            .header-linkes a,
+            .header-linkes button {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+        
+            .menu-toggle {
+                display: block;
+            }
+        
+            .header-linkes {
+                display: none;
+            }
+        
+            .header-linkes.active {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+        
+            .header-linkes a,
+            .header-linkes button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">Auto <span>Glass</span></h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="header-linkes">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <button class="sign-in" onclick="window.location.href='tel:+1234567890'">
+                <i class="fa-solid fa-phone"></i> CALL US
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.header-linkes');
+            links.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

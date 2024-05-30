@@ -1,0 +1,439 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+      
+}
+.header{
+    background-color: #3A2D5F;                  
+      /* background-color: #3A2D5F; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.header span{
+    color: red;
+}
+.header-h1{
+    color: yellow;
+}
+.logo img{
+    width: 100px;
+}
+.header-linkes a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 25px;
+    border-radius: 15px;
+    transition: 0.7s ease;
+    /* font-weight: 600; */
+}
+.header-linkes a:hover{
+    background-color: red;
+}
+.header-linkes button{
+    background-color: rgb(250, 250, 250);
+    border-radius: 1px;
+    border:0 ;
+    padding: 5px 15px;
+}
+.header-linkes button:hover{
+    background-color: rgb(241, 120, 140);
+}
+.Landing-page span{
+    font-size: 20px ;
+}
+.header-content{
+    color: #fff;
+}
+.logo{
+    text-transform: uppercase;
+}
+.services-container{
+    padding: 25px 50px;
+}
+.list{
+    display: flex;
+    border-radius: 20px ;
+    padding: 0;
+}
+.list{
+    background-image: url(img/main_road.jpg);
+    height: 90 vh;
+}
+.list img{
+    width: 500px;
+    padding-left:350fpx ;
+}
+.list ol li{
+    padding: 12px 0;
+    color: #fff;
+}
+.sample-container{
+    padding: 25px 50px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.projects{
+    background-color: gray;
+}
+.projects .content{
+    margin-top: 30px;                         
+}
+
+.Glass-Replacement{
+    line-height: 2;
+    width: auto;
+}
+.fix-glass h1{
+    color: red;
+}
+.Non-Repairable {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.Non-Repairable img{
+    width: 400px;
+    gap: 12px;
+    /*Update*/
+    /* margin-left: 36px; */
+}
+
+.project-card{
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius:10px ;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+    /* you can do  opacity  */
+}
+.project-img img{
+    width: 100%;
+}
+.project-info{
+    padding: 1em;
+}
+.project-services{
+    font-size: 0.8em;
+    color: black;
+}
+
+
+.cards-container{
+    display: flex;
+    gap: 20px;
+    padding-left: 150px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+.card{
+    width: 300px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    transition: 0.7s ease;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    width: 249px;
+    align-items: center;
+    padding-left: 30px;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+
+}
+.card-info img{
+    width: 30px
+    
+}
+.mooti-group{
+    color: blue;
+}
+.thumb{
+    width: 300px;
+    border-radius: 20px 20px 0 0;
+    height: 238px;
+}
+.Cars{
+    /* padding: 40px 550px;
+    font-size: 1.8em;
+    margin: 30px;
+    font-weight:400; */
+    display: flex;
+    justify-content: center;
+    font-size:2em;
+}
+.Cars p{
+    font-size: l;
+}
+
+
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp-chat a img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+}
+.whatsapp-chat a img:hover {
+    transform: scale(1.1);
+}
+.footer{
+    background-color: #3A2D5F;
+    padding: 25px 50px;
+}
+.f-container{
+    max-width: 1170px;
+
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color:yellow;
+}
+.footer-col p{
+    width: 300px;
+    color: #fff;
+    line-height: 2;
+}
+.footer-col ul{
+    list-style-type: none; 
+    color: #fff;
+    text-align: center;
+}
+.footer-col ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: inline-block;
+}
+.footer-col ul li a:hover{
+    color: red;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.socail-links .a .i{
+    color: #fff;
+}
+
+i{
+    padding-left: 12px;
+}
+.footer i {
+    color: white;
+}
+.footer i:hover {
+    color: pink;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    padding-left: 450px;
+}
+/*####################*/
+/*# Responsive Code ##*/
+/*####################*/
+@media (max-width: 991px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .header-linkes {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header-linkes a,
+    .header-linkes button {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .services-container,
+    .sample-container {
+        padding: 25px;
+    }
+
+    .list {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .list img {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .cards-container {
+        padding-left: 0;
+    }
+
+    .cards-container,
+    .projects .content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .header-linkes {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header-linkes a,
+    .header-linkes button {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .services-container,
+    .sample-container {
+        padding: 15px;
+    }
+
+    .list {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .list img {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .cards-container {
+        padding-left: 0;
+    }
+
+    .cards-container,
+    .projects .content {
+        justify-content: center;
+    }
+
+    .Non-Repairable img {
+        width: 100%;
+        /*Update*/
+        margin-left: 3px;
+    }
+
+    .Cars {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
+
+    .header-linkes {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header-linkes a,
+    .header-linkes button {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .services-container,
+    .sample-container {
+        padding: 10px;
+    }
+
+    .list {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .list img {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .cards-container {
+        padding-left: 0;
+    }
+
+    .cards-container,
+    .projects .content {
+        justify-content: center;
+    }
+    .Non-Repairable{
+        flex-direction: column;
+    }
+    .Non-Repairable img {
+        width: 100%;
+    }
+
+    .Cars {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    .footer-col {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .footer-col p {
+        width: 100%;
+    }
+    .footer-col h4{
+        padding: 0;
+    }
+}
+

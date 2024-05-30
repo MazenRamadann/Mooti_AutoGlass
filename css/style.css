@@ -1,0 +1,484 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+      
+}
+.header{
+    background-color: #3A2D5F;                  
+      /* background-color: #3A2D5F; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.header span{
+    color: red;
+}
+.header-h1{
+    color: yellow;
+}
+.logo img{
+    width: 100px;
+}
+.header-linkes a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 25px;
+    border-radius: 15px;
+    transition: 0.7s ease;
+    /* font-weight: 600; */
+}
+.header-linkes a:hover{
+    background-color: red;
+}
+.header-linkes button{
+    background-color: rgb(250, 250, 250);
+    border-radius: 1px;
+    border:0 ;
+    padding: 2px 15px;
+}
+.header-linkes button:hover{
+    background-color: rgb(241, 120, 140);
+}
+.Landing-page span{
+    font-size: 20px ;
+}
+.header-content{
+    color: #fff;
+}
+.logo{
+    text-transform: uppercase;
+}
+.Landing-page{
+    display: flex;
+    background-image: url(Screenshot\ 2024-05-05\ 143036.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 90vh;
+}
+.Landing-page {
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    border-radius:  0 0 50px 50px;
+}
+.Landing-page-left p{
+    line-height: 1.6;
+}
+.Landing-page h1{
+    color: #fff;
+}
+.Landing-search input{
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    /* padding: 0 10px; */
+    height: 30px;
+}
+.Landing-search button{
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: #080808;
+    background-color: rgb(221, 43, 72);
+    height: 30px;
+    position: absolute;
+    left: 200px;
+}
+.Landing-search button:hover{
+    background-color: rgb(241, 120, 140);
+}
+.Landing-page img{
+    border-radius: 20px;
+    height: 300px;
+}
+.trending-container{
+    padding: 25px 50px;
+}
+.trendingHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    color: red;
+    background-color: yellow;
+    border-radius: 10px;
+    border: none;
+}
+.btn:hover{
+    background-color: blue;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+.trending-container span{
+    text-transform: uppercase;
+    color: lightcoral;
+}
+.trendingHeader h1{
+    margin-top: 0;
+}
+/* .trending-cards{
+    display: flex;
+    gap: 20px;
+    padding: 25px 50px;
+    padding-left: 140px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+
+}
+.card{
+    width: 300px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    transition: 0.7s ease;
+        Update
+        margin-left: 67px;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    width: 249px;
+    align-items: center;
+    padding-left: 30px;
+    
+}
+.card:hover{
+    transform: scale(1.1);
+
+}
+.card-info img{
+    width: 30px
+    
+} */
+/* ---------------------------------------- */
+.trending-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px; /* Adjusted padding */
+    justify-content: center; /* Center align cards */
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 300px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    transition: transform 0.7s ease; /* Moved transition property */
+    overflow: hidden; /* Ensuring overflow is hidden */
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.thumb {
+    width: 100%; /* Adjusted width to ensure image fills card */
+    height: 238px;
+    object-fit: cover; /* Ensure the image covers the entire card */
+    border-radius: 20px 20px 0 0;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column; /* Adjusted flex direction */
+    padding: 15px; /* Adjusted padding */
+}
+
+.card-name {
+    margin-bottom: 10px; /* Added margin to separate content */
+}
+
+.card-info img {
+    width: 30px;
+    height: 30px; /* Added height to maintain aspect ratio */
+}
+
+@media screen and (max-width: 600px) {
+    .trending-cards {
+        padding: 50px 10px; /* Adjusted padding for smaller screens */
+    }
+}
+
+
+
+
+/* ---------------------------------------- */
+.mooti-group{
+    color: blue;
+}
+.thumb{
+    width: 300px;
+    border-radius: 20px 20px 0 0;
+    height: 238px;
+}
+.safty-container{
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+
+}
+.left-part .up{
+    margin: -10px;
+}
+.safty-info{
+    color: #fff;
+    line-height: 1.6;
+}
+.left{
+    color: blue;
+}
+.car-crash img{
+    width: 460px;
+}
+.header-img{
+    display: none;
+
+}
+.container{
+    padding: 25px 50px;
+}
+.glass-replacement{
+    padding-left: 250px;
+    padding-top: 50px;
+}
+.card-info{
+    color: #3A2D5F;
+}
+.replacement-info{
+    background-color: black;
+    color: #fff;
+    line-height: 2;
+}
+.get-in-touch{
+    padding: 25px 50px;
+}
+.main-road-img img{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* adding the fixed icon*/
+
+.whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp-chat a img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+}
+.whatsapp-chat a img:hover {
+    transform: scale(1.1);
+}
+
+.footer{
+    background-color: #3A2D5F;
+    padding: 25px 50px;
+}
+.f-container{
+    max-width: 1170px;
+
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    padding-left: 50px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color:yellow;
+}
+.footer-col p{
+    width: 300px;
+    color: #fff;
+    line-height: 2;
+}
+.footer-col ul{
+    list-style-type: none;
+    text-align: center
+}
+.footer-col ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: inline-block;
+}
+.footer-col ul li a:hover{
+    color: red;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+
+}
+.socail-links i{
+    color: #fff;
+}
+i{
+    padding-left: 12px;
+}
+.footer i {
+    color: white;
+}
+.footer i:hover {
+    color: pink;
+}
+
+
+
+
+
+/*Update*/
+.mazda{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px){
+    .header-linkes a{
+        padding: 0 6px;
+    }
+    .header , .header-linkes{
+        display: flex;
+        flex-direction: column;
+    }
+    .Landing-page{
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        height: 35%;
+        border-radius: 0%;
+        margin-bottom: 23px;
+    }
+    .trending-cards{
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        margin: -84px;
+    }
+
+}
+/*####################*/
+/*###### Responsive ########*/
+/*####################*/
+
+/* Responsive Code */
+@media screen and (max-width: 991px) {
+    /* .header, .header-linkes, .Landing-page {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    .header-linkes a, .header-linkes button {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    } */
+    .trending-cards {
+        padding: 25px;
+    }
+    .safty-container, .container, .get-in-touch {
+        padding: 15px 25px;
+    }
+    .main-road-img img, .car-crash img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* .header, .header-linkes, .Landing-page {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
+    .header-linkes a, .header-linkes button {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    } */
+    .trending-cards, .safty-container, .container, .get-in-touch {
+        padding: 10px;
+    }
+    .main-road-img img, .car-crash img {
+        width: 100%;
+    }
+    .left-part .up {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+
+
+
+    /* .header, .header-linkes, .Landing-page {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
+    .header-linkes a, .header-linkes button {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    } */
+    .trending-cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .safty-container, .container, .get-in-touch {
+        padding: 5px 10px;
+    }
+    .main-road-img img, .car-crash img {
+        width: 100%;
+    }
+    .footer-col {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .footer-col p {
+        width: 100%;
+    }
+    .footer-col h4{
+        padding: 0;
+    }
+    .glass-replacement img{
+        width: 60%;
+    }
+}

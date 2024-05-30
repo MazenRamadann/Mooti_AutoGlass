@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sevices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            background-color: #3A2D5F;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: red;
+        }
+        
+        .header-linkes {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-linkes a,
+        .header-linkes button {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            transition: 0.7s ease;
+        }
+        
+        .header-linkes a:hover,
+        .header-linkes button:hover {
+            background-color: red;
+        }
+        
+        .header-linkes button {
+            background-color: rgb(250, 250, 250);
+            color: #3A2D5F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        .header-linkes button:hover {
+            background-color: rgb(241, 120, 140);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .header-linkes {
+                flex-direction: column;
+                width: 100%;
+            }
+        
+            .header-linkes a,
+            .header-linkes button {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+        
+            .menu-toggle {
+                display: block;
+            }
+        
+            .header-linkes {
+                display: none;
+            }
+        
+            .header-linkes.active {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+        
+            .header-linkes a,
+            .header-linkes button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+        .footer {
+    background-color: #3A2D5F;
+    color: #fff;
+    padding: 20px 50px;
+}
+
+.footer .f-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: yellow;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: red;
+}
+
+.footer .social-links a {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: red;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer .f-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .copyright{
+        padding-left:0;
+    }
+}
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="logo">Auto <span>Glass</span></h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="header-linkes">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Services</a>
+            <a href="contact.html">Contact</a>
+            <button class="sign-in" onclick="window.location.href='tel:+1234567890'">
+                <i class="fa-solid fa-phone"></i> CALL US
+            </button>
+        </div>
+    </div>
+    <div class="services-container">
+        <div class="Glass-Replacement">
+            <h1>Auto Glass Replacement</h1>
+            <p>Auto Glass Service is one of the largest independently-owned windshield replacement and repair companies
+                in the country. We offer auto glass replacement with free mobile service in your area. Whether it's your
+                front windshield, rear windshield, driver window, passenger window, or quarter glass, Auto Glass Service
+                has your auto glass replacement for every type of vehicle (car, truck, van, year, make, model, etc.). We
+                feature original equipment manufacture's quality glass for a perfect fit, free mobile service, same day
+                service and a national lifetime warranty on the workmanship. Get safely back on the road today! </p>
+        </div>
+        <div class="fix-glass">
+            <h1>Fix the chip before it is too late</h1>
+            <h1>Non-Repairable Windshield / Windscreen Damage</h1>
+            <p>
+                Small chips can lead to large cracks requiring complete windshield replacement
+            </p>
+            <div class="Non-Repairable">
+                <img src="img/non-repairable-01.jpg" alt="">
+                <img src="img/non-repairable-02.jpg" alt="">
+                <img src="img/non-repairable-03.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="Cars">
+        <p id="samples">samples of our works </p>
+    </div>
+    <div class="cards-container">
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/red-car.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Wow, you're doing an amazing job changing the glass on the Mercedes</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/Rover.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>
+                        You're making that rover look brand new with your glass changing skills!</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/truks.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Upgrade your bulldozer's visibility and safety with our expert glass replacement service,
+                        ensuring clear and unobstructed views for enhanced productivity on the job site</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/39387586_10155655078166981_1530876131278848000_n.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Get ready for a new experience for your car with clear and safe new glass</h3>
+                </div>
+                <a href="">
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/f5d2277c-1c77-46cc-857a-809fd7041224.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Get new car glass at affordable prices and unparalleled quality, and enjoy safe and comfortable
+                        driving."</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/63af8dd8-d253-405a-86f0-005eefdc773e.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Transform your Rover's outlook with seamless glass replacement, restoring its elegance and
+                        enhancing your driving experience</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/8e930f73-12f5-487e-b0b7-d6cd308e5b5f.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Elevate your Ford's appearance and safety with our professional glass replacement services,
+                        ensuring clarity and confidence on the road</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/b39cf1fe-cbe7-418c-bb88-015e9656935d.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Enjoy clear and comfortable visibility while driving with the new car glass we offer</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/441444535_972212251176460_8113839274146281963_n.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Car glass replacement is not just a repair, it's an enhancement for its appearance and
+                        performance</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/f2d99190-6328-4063-8764-7146ef0554d5.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>New glass, same new car! Make your car look fantastic with new glass from us</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/d69bf7be-0895-4071-986b-e1253c1a789a.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Your car deserves the best, and we offer you high-quality glass and outstanding service</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/1a1f9bb2-b35b-4874-942b-9374d534bc51.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Quick and easy upgrade for your car with new glass that gives you clear visibility every time
+                        you drive</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/519b8740-4dd4-4d47-98d7-bd1426ecfa2b.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Upgrade your ride with crystal-clear vision our premium glass replacement service ensures safety
+                        and style</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/509d0781-ad72-468d-ac1e-aa329998bba2.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>Restore your car's original beauty and functionality with our seamless glass replacement service
+                    </h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="contact.php">
+                <img src="img/4f947552-a110-47fc-b423-f171d7b934b9.jpg" alt="" class="thumb">
+            </a>
+            <div class="card-info">
+                <div class="card-name">
+                    <p class="mooti-group">Trust Us</p>
+                    <h3>We will come to you whenever and wherever you need service, even the same day you call.</h3>
+                </div>
+                <a href="">
+                    <!-- <img src="img/download.png " alt=""> -->
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer services page -->
+    <div class="footer">
+        <div class="f-container">
+            <div class="row">
+                <!-- 1st-->
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <p>With a commitment to quality materials and superior craftsmanship, we ensure your driving
+                        experience is safe, comfortable, and stylish. Choose us as your trusted auto glass partner for
+                        reliability and satisfaction."</p>
+                    <!-- <ul>
+                        <li><a href=""></a></li>
+                    </ul> -->
+                </div>
+                <!-- 2nd -->
+                <div class="footer-col">
+                    <h4>Company Information</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="connection.php">Contact us</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- 3rd -->
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="https://maps.app.goo.gl/rjpdMjpewPxza19k6">العملاق لزجاج السيارات، JCF8+5VC, Wadi
+                                El Zayni</a></li>
+                        <li><a href="">70965232</a></li>
+                        <p class="social-links "><a href="https://www.facebook.com/profile.php?id=100057177501302&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a> <a href=""><i
+                                    class="fa-brands fa-instagram"></i></a> <a href=""><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                            <a href=""><i class="fa-solid fa-envelope"></i></a>
+                        </p>
+                        <li><a href=""></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="copyright">
+                &copy; 2024 Mostafa Mooti Auto Glass. All rights reserved.
+            </div>
+
+        </div>
+
+
+        <div class="whatsapp-chat">
+            <a href="https://wa.me/70965232" target="_blank">
+                <img src="img/download.png" alt="WhatsApp">
+            </a>
+        </div>
+        <script>
+             function toggleMenu() {
+            const links = document.querySelector('.header-linkes');
+            links.classList.toggle('active');
+        }
+        </script>
+</body>
+
+</html>

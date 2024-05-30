@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            background-color: #3A2D5F;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: red;
+        }
+        
+        .header-linkes {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-linkes a,
+        .header-linkes button {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            transition: 0.7s ease;
+        }
+        
+        .header-linkes a:hover,
+        .header-linkes button:hover {
+            background-color: red;
+        }
+        
+        .header-linkes button {
+            background-color: rgb(250, 250, 250);
+            color: #3A2D5F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        .header-linkes button:hover {
+            background-color: rgb(241, 120, 140);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .header-linkes {
+                flex-direction: column;
+                width: 100%;
+            }
+        
+            .header-linkes a,
+            .header-linkes button {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+        
+            .menu-toggle {
+                display: block;
+            }
+        
+            .header-linkes {
+                display: none;
+            }
+        
+            .header-linkes.active {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+        
+            .header-linkes a,
+            .header-linkes button {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .footer {
+    background-color: #3A2D5F;
+    color: #fff;
+    padding: 20px 50px;
+}
+
+.footer .f-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: yellow;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: red;
+}
+
+.footer .social-links a {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: red;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer .f-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1 class="logo">Auto <span>Glass</span></h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="header-linkes">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <button class="sign-in" onclick="window.location.href='tel:+1234567890'">
+                <i class="fa-solid fa-phone"></i> CALL US
+            </button>
+        </div>
+    </div>
+    <!-- Landing Page  -->
+    <div class="Landing-page">
+        <div class="Landing-page-left">
+            <span>Welcome Mooti Group</span>
+            <h1 class="header-h1">Put your Trust in Us</h1>
+            <!-- <p class="header-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium aliquam error
+                iure beatae perferendis
+                fuga, iste est dicta facilis repellat nisi inventore minus cumque in porro maxime illum labore ad
+                laboriosam dolorum, quidem corporis quod accusamus! Pariatur porro veritatis nam. Ratione, iste fugiat
+                accusamus minima maiores numquam nihil amet! Vero laborum veritatis doloremque quia voluptas magnam
+                dolores a dolor dignissimos maxime, eius, nobis ratione delectus, minima sapiente nesciunt corrupti
+                aliquid harum natus iure officia. Dolor, ea quaerat blanditiis dolorem numquam laboriosam expedita atque
+                voluptatibus magni officiis voluptas similique repellat facilis sint harum debitis, nulla, unde maxime
+                nam itaque ipsam nobis!</p> -->
+            <h1>We'll Get You
+                On the Road Again
+                With Prompt & convenient mobile services.
+                Ask about our One Hour Safe Drive Away Time</h1>
+            <div class="Landing-search">
+                <input type="text" placeholder="--Start searching--">
+               <a href="services.html"><button onclick="" >Search</button></a>
+            </div>
+        </div>
+        <div class="">
+            <!-- <img src="img/main_road.jpg" alt=""> -->
+        </div>
+    </div>
+    <!-- Trending Glass -->
+  
+        <!-- first card -->
+        <div class="trending-cards">
+            <div class="card">
+                <a href="services.html">
+                    <img src="img/sp-repairing-windshield.jpg" alt="" class="thumb">
+                </a>
+                <div class="card-info">
+                    <div class="card-name">
+                        <p class="mooti-group">Mobile convenience</p>
+                        <h3>We will come to you whenever and wherever you need service, even the same day you call.</h3>
+                    </div>
+                    <a href="">
+                        <!-- <img src="img/download.png " alt=""> -->
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- second card -->
+            <div class="card">
+                <a href="">
+                    <img src="img/image.jpg" alt="" class="thumb">
+                </a>
+                <div class="card-info">
+                    <div class="card-name">
+                        <p class="mooti-group">Quality Workmanship</p>
+                        <h3>Our certified technicians solve your problem using the highest quality glass and adhesives
+                            for a perfect fit.</h3>
+                    </div>
+                    <a href="">
+                        <!-- <img src="img/download.png " alt=""> -->
+                    </a>
+
+
+                </div>
+            </div>
+            <!-- Third card -->
+
+            <div class="card">
+                <a href="">
+                    <img src="img/auto-glass-replacement.png" alt="" class="thumb">
+                </a>
+                <div class="card-info">
+                    <div class="card-name">
+                        <p class="mooti-group">competitive Prices</p>
+                        <h3>You will be pleasantly surprised at our competitive pricing and easy scheduling. Same day
+                            service available.</h3>
+                    </div>
+                    <a href="">
+                        <!-- <img src="img/download.png " alt=""> -->
+                    </a>
+
+
+                </div>
+            </div>
+            <!-- fourth card -->
+
+            <!-- <div class="card">
+                <img src="img/download.jpg" alt="" class="thumb">
+                <div class="card-info">
+                    <div class="card-name">
+                       <p>Glass Model</p>
+                       <h3>ROVER Glass</h3>
+                    </div>
+                    <a href="">
+                        <img src="img/download.png " alt="">
+                    </a>
+                
+
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <div class="safty-container">
+
+        <div class="left-part">
+            <h1 class="header-h1">Providing safety
+                <br>
+                where it counts
+            </h1>
+            <p class="safty-info">Not only does your windshield provide the brace for your passenger-side airbag, it
+                also plays a vital part in roof-crush protection in a roll-over accident. If your windshield loses
+                adhesion on a collision or rollover, your safety is in jeopardy. This is why it is important that your
+                auto glass work be done by a trained professional such as those employed by <span class="left">Mostafa
+                    Mooti</span></p>
+        </div>
+        <div class="car-crash">
+            <img src="img/car-crash copy.png" alt="" class="">
+        </div>
+    </div>
+    <br>
+    <!--  -->
+    <div class="container">
+        <div class="car-info">
+            <h2>Our FREE Mobile Service makes it Convenient for you and your family. Same Day Service Available</h2>
+            <p>Our Customer Service Specialists make scheduling your windshield repair or replacement easy and painless.
+                Our mobile service can accommodate even the most demanding schedules. Let Auto Glass Service's certified
+                mobile technicians get you back on the road quickly and safely.</p>
+        </div>
+
+        <div class="glass-replacement">
+            <img src="img/mazda.jpg" class="mazda" alt="">
+        </div>
+
+        <div class="replacement-info">
+            <p>Whether it's front windshield, rear windshield, driver window, passenger window, or quarter glass, Auto
+                Glass Service performs Auto Glass Replacement for every type of vehicle (car, truck, van, year, make,
+                model, etc) in your area. We feature original equipment quality glass, free mobile service, and a
+                national lifetime warranty on workmanship.</p>
+        </div>
+    </div>
+
+    <!-- Footer  -->
+    
+    <div class="footer">
+        <div class="f-container">
+            <div class="row">
+                <!-- 1st -->
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <p>With a commitment to quality materials and superior craftsmanship, we ensure your driving experience is safe, comfortable, and stylish. Choose us as your trusted auto glass partner for reliability and satisfaction.</p>
+                </div>
+                <!-- 2nd -->
+                <div class="footer-col">
+                    <h4>Company Information</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <!-- 3rd -->
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="https://maps.app.goo.gl/rjpdMjpewPxza19k6">العملاق لزجاج السيارات، JCF8+5VC, Wadi El Zayni</a></li>
+                        <li><a href="tel:+70965232">70965232</a></li>
+                        <p class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100057177501302&mibextid=ZbWKwL" target="new"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        </p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" >
+            &copy; 2024 Mostafa Mooti Auto Glass. All rights reserved.
+        </div>
+    </div>
+    
+
+      <!-- WhatsApp icon -->
+      <div class="whatsapp-chat">
+        <a href="https://wa.me/70965232" target="_blank">
+            <img src="img/download.png" alt="WhatsApp Chat">
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.header-linkes');
+            links.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
